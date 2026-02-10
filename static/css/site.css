@@ -163,6 +163,10 @@ a:hover{ color: var(--accent); }
   box-shadow: 0 0 0 .2rem rgba(37, 99, 235, 0.22);
 }
 
+.navbar .container-fluid{
+  max-width: 80% !important;
+}
+
 /* Mobile: solid dark background for readability */
 @media (max-width: 991.98px){
   .navbar-custom.nav-glass{
