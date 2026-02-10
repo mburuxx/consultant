@@ -1,0 +1,134 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mburu Consulting — POS Systems & Business Websites</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  </head>
+
+  <body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
+          <span class="brand-badge">M</span>
+          Mburu Consulting
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item">
+              <a class="btn btn-dark px-3" href="#">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="badge text-bg-white border fw-semibold mb-3">
+              Helping Kenyan businesses digitize operations
+            </span>
+
+            <h1 class="display-5 fw-bold">
+              POS systems, websites, and automation for modern businesses.
+            </h1>
+
+            <p class="lead text-secondary mt-3">
+              I build reliable solutions for SMEs—sales tracking, inventory, receipts, staff roles,
+              reports, modern business websites, and custom workflows that save time.
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row gap-2 mt-4">
+              <a class="btn btn-dark btn-lg" href="#">Request a Quote</a>
+              <a class="btn btn-outline-dark btn-lg" href="#">View Portfolio</a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <span class="pill">Django</span>
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">APIs</span>
+              <span class="pill">Integrations</span>
+              <span class="pill">Support</span>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0 rounded-4">
+              <div class="card-body p-4">
+                <div class="p-4 rounded-4 text-white hero-card">
+                  <div class="small fw-semibold text-white-50">Typical outcomes</div>
+                  <ul class="mt-3 mb-0">
+                    <li>Accurate sales & inventory tracking</li>
+                    <li>Faster checkout & receipts</li>
+                    <li>Clear daily/weekly reports</li>
+                    <li>Professional online presence</li>
+                  </ul>
+                </div>
+
+                <div class="row g-3 mt-3">
+                  <div class="col-sm-6">
+                    <div class="mini-card">
+                      <div class="fw-semibold">POS Systems</div>
+                      <div class="text-secondary small">Inventory, roles, reports, receipts, analytics.</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mini-card">
+                      <div class="fw-semibold">Business Websites</div>
+                      <div class="text-secondary small">Fast, clean, mobile-first pages that convert.</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mini-card">
+                      <div class="fw-semibold">Automation</div>
+                      <div class="text-secondary small">Custom workflows, integrations, dashboards.</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mini-card">
+                      <div class="fw-semibold">Support</div>
+                      <div class="text-secondary small">Maintenance, upgrades, monitoring, fixes.</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top bg-white mt-5">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+        <div>
+          <div class="fw-bold">Mburu Consulting</div>
+          <div class="text-secondary small">POS Systems • Websites • Business Digitization</div>
+        </div>
+        <div class="text-secondary small">© {% now "Y" %} Mburu Consulting. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
