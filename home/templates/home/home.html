@@ -1,134 +1,251 @@
+{% extends "home/base.html" %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mburu Consulting — POS Systems & Business Websites</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/site.css' %}">
-  </head>
+{% block title %}Panther Systems — Modern Kenyan Tech Consulting{% endblock %}
 
-  <body class="bg-light">
+{% block content %}
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
-      <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
-          <span class="brand-badge">M</span>
-          Mburu Consulting
-        </a>
+<!-- SECTION 1: HERO -->
+<section class="py-5">
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="hero-panel">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          {#<span class="pill pill-dark">Top-Rated Tech Consulting</span>#}
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <h1 class="display-5 fw-bold text-white mt-3">
+            Modernize Your Business with Smart Digital Systems.
+          </h1>
 
-        <div id="nav" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-item">
-              <a class="btn btn-dark px-3" href="#">Request a Quote</a>
-            </li>
-          </ul>
+          <p class="lead hero-subtitle mt-3 mb-4">
+            We build high-performance Websites and install Point of Sale (POS) systems for Kenyan SMEs.
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-2">
+            <a href="#" class="btn btn-outline-light btn-lg">
+              View Our Work
+            </a>
+          </div>
+
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <span class="pill pill-dark">Custom Websites</span>
+            <span class="pill pill-dark">POS Systems</span>
+            <span class="pill pill-dark">Digital Operations</span>
+            <span class="pill pill-dark">Support</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-visual">
+            <img
+              src="{% static 'img/hero.png' %}"
+              class="img-fluid rounded-4"
+              alt="Panther Systems dashboard preview"
+              loading="lazy"
+            >
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
+</section>
 
-    <!-- Hero -->
-    <header class="py-5">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <span class="badge text-bg-white border fw-semibold mb-3">
-              Helping Kenyan businesses digitize operations
-            </span>
+<section class="py-4">
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="stats-card">
+          <div class="stats-num h3 mb-1">48–72hrs</div>
+          <div class="stats-label">Typical website turnaround (MVP)</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stats-card">
+          <div class="stats-num h3 mb-1">99.9%</div>
+          <div class="stats-label">Uptime-focused deployments</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stats-card">
+          <div class="stats-num h3 mb-1">SME-first</div>
+          <div class="stats-label">Built for Kenyan operations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <h1 class="display-5 fw-bold">
-              POS systems, websites, and automation for modern businesses.
-            </h1>
 
-            <p class="lead text-secondary mt-3">
-              I build reliable solutions for SMEs—sales tracking, inventory, receipts, staff roles,
-              reports, modern business websites, and custom workflows that save time.
-            </p>
+<!-- SECTION 2: SERVICES -->
+<section class="py-5 section-tint">
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-2">Services Built for Kenyan SMEs</h2>
+      <p class="text-secondary mb-0">
+        Practical systems that improve sales, visibility, and day-to-day operations.
+      </p>
+    </div>
 
-            <div class="d-flex flex-column flex-sm-row gap-2 mt-4">
-              <a class="btn btn-dark btn-lg" href="#">Request a Quote</a>
-              <a class="btn btn-outline-dark btn-lg" href="#">View Portfolio</a>
+    <div class="row g-3 g-md-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="mini-card mini-card--accent h-100">
+          <div class="d-flex align-items-start gap-3">
+            <div class="social-icon" aria-hidden="true">
+              <i class="bi bi-globe"></i>
             </div>
-
-            <div class="d-flex flex-wrap gap-2 mt-4">
-              <span class="pill">Django</span>
-              <span class="pill">PostgreSQL</span>
-              <span class="pill">APIs</span>
-              <span class="pill">Integrations</span>
-              <span class="pill">Support</span>
+            <div>
+              <h3 class="h5 fw-semibold mb-1">Web Development</h3>
+              <p class="text-secondary small mb-0">
+                Fast, clean, websites designed to convert visitors into customers.
+              </p>
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="card shadow-sm border-0 rounded-4">
-              <div class="card-body p-4">
-                <div class="p-4 rounded-4 text-white hero-card">
-                  <div class="small fw-semibold text-white-50">Typical outcomes</div>
-                  <ul class="mt-3 mb-0">
-                    <li>Accurate sales & inventory tracking</li>
-                    <li>Faster checkout & receipts</li>
-                    <li>Clear daily/weekly reports</li>
-                    <li>Professional online presence</li>
-                  </ul>
-                </div>
+          <div class="mt-3">
+            <ul class="mb-0 small text-secondary ps-3">
+              <li>Company websites & landing pages</li>
+              <li>Booking & inquiry funnels</li>
+              <li>SEO-ready structure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-                <div class="row g-3 mt-3">
-                  <div class="col-sm-6">
-                    <div class="mini-card">
-                      <div class="fw-semibold">POS Systems</div>
-                      <div class="text-secondary small">Inventory, roles, reports, receipts, analytics.</div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="mini-card">
-                      <div class="fw-semibold">Business Websites</div>
-                      <div class="text-secondary small">Fast, clean, mobile-first pages that convert.</div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="mini-card">
-                      <div class="fw-semibold">Automation</div>
-                      <div class="text-secondary small">Custom workflows, integrations, dashboards.</div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="mini-card">
-                      <div class="fw-semibold">Support</div>
-                      <div class="text-secondary small">Maintenance, upgrades, monitoring, fixes.</div>
-                    </div>
-                  </div>
-                </div>
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="mini-card mini-card--accent h-100">
+          <div class="d-flex align-items-start gap-3">
+            <div class="social-icon" aria-hidden="true">
+              <i class="bi bi-credit-card"></i>
+            </div>
+            <div>
+              <h3 class="h5 fw-semibold mb-1">POS Systems</h3>
+              <p class="text-secondary small mb-0">
+                Retail and restaurant POS setups—inventory, sales, receipts, and staff roles.
+              </p>
+            </div>
+          </div>
 
+          <div class="mt-3">
+            <ul class="mb-0 small text-secondary ps-3">
+              <li>Sales tracking & reports</li>
+              <li>Stock & menu management</li>
+              <li>Receipts & user permissions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="mini-card mini-card--accent h-100">
+          <div class="d-flex align-items-start gap-3">
+            <div class="social-icon" aria-hidden="true">
+              <i class="bi bi-headset"></i>
+            </div>
+            <div>
+              <h3 class="h5 fw-semibold mb-1">IT Support & Strategy</h3>
+              <p class="text-secondary small mb-0">
+                Guidance, maintenance, and improvements to keep your systems stable and secure.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <ul class="mb-0 small text-secondary ps-3">
+              <li>Ongoing support & updates</li>
+              <li>Process digitization</li>
+              <li>System audits & roadmaps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: SOCIAL PROOF -->
+<section class="py-5 section-tint">
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-5">
+        <h2 class="fw-bold mb-2">Powering Businesses in Nairobi and Beyond.</h2>
+        <p class="text-secondary mb-0">
+          We partner with SMEs to improve checkout speed, reduce stock losses, and build a professional online presence.
+        </p>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="mini-card text-center py-3">
+              <div class="fw-semibold">Client Logo</div>
+              <div class="text-secondary small">Retail</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="mini-card text-center py-3">
+              <div class="fw-semibold">Client Logo</div>
+              <div class="text-secondary small">Restaurant</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="mini-card text-center py-3">
+              <div class="fw-semibold">Client Logo</div>
+              <div class="text-secondary small">Services</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="mini-card text-center py-3">
+              <div class="fw-semibold">Client Logo</div>
+              <div class="text-secondary small">Clinic</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="mt-4">
+          <div class="mini-card">
+            <div class="d-flex align-items-start gap-3">
+              <div class="social-icon" aria-hidden="true">
+                <i class="bi bi-chat-quote"></i>
+              </div>
+              <div>
+                <p class="mb-1">
+                  <span class="fw-semibold">“</span>
+                  Panther Systems helped us streamline sales and inventory—our reporting is now clear and reliable.
+                  <span class="fw-semibold">”</span>
+                </p>
+                <div class="text-secondary small">Operations Manager • Nairobi</div>
               </div>
             </div>
           </div>
+        </div>
 
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: CTA STRIP -->
+<section class="py-5">
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="cta-strip p-4 p-md-5">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8">
+          <div class="section-kicker mb-2"><i class="bi bi-lightning-charge"></i> Fast onboarding</div>
+          <h2 class="h3 fw-bold mb-1 text-white">Ready to upgrade your operations?</h2>
+          <p class="mb-0">Tell us what you’re building — we’ll recommend the best approach and give a clear quote.</p>
+        </div>
+        <div class="col-lg-4 d-flex flex-column flex-sm-row justify-content-lg-end gap-2">
+          <a href="#" class="btn btn-accent btn-lg">Get a Quote</a>
+          <a href="https://wa.me/254715072941" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-whatsapp me-2"></i> WhatsApp
+          </a>
         </div>
       </div>
-    </header>
-
-    <!-- Footer -->
-    <footer class="py-4 border-top bg-white mt-5">
-      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
-        <div>
-          <div class="fw-bold">Mburu Consulting</div>
-          <div class="text-secondary small">POS Systems • Websites • Business Digitization</div>
-        </div>
-        <div class="text-secondary small">© {% now "Y" %} Mburu Consulting. All rights reserved.</div>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+    </div>
+  </div>
+</section>
+{% endblock %}
